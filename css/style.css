@@ -1,5 +1,12 @@
+*{
+    margin: 0;
+}
+
 img{
-    width: 30rem;
+    width: 55rem;
+}
+video{
+    width: 55rem;
 }
 
 fieldset{
@@ -17,4 +24,106 @@ th, td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+}
+
+header {
+  position: relative;
+  background-color: #616161;
+  overflow: hidden;
+}
+
+.top_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.5rem 0 0.5rem;
+}
+
+header h1 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+  color: white;
+}
+header a{
+    text-decoration: none;
+}
+
+header img{
+    width: 100%;
+    max-height: 25rem;
+    object-fit: cover;
+    object-position: 0 calc(100%/3);
+    display: block;
+    filter: brightness(0.5);
+}
+
+nav{
+    display: flex;
+    gap: 2rem;
+}
+
+nav button{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.quote{
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(203, 203, 203);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.quote q, .quote p{
+    font-size: 2rem;
+}
+
+main{
+    text-align: center;
+}
+
+article{
+    margin: 0 20rem 0 20rem;
+    display: block;
+    flex-direction: column;
+}
+
+article *{
+    font-size: 1.3rem;
+}
+
+article img,
+article video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+article >p{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+ul{
+    margin: 1rem 0 1rem 0;
+}
+
+h2{
+    font-size: 3.5rem;
+    margin: 1.5rem 0 1.5rem;
+}
+
+form{
+    text-align: justify;
 }

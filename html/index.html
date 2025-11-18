@@ -8,29 +8,32 @@
   </head>
   <body>
     <header>
-      <h1>Эпоха Петра Великого</h1>
+      <div class="top_header">
+        <a href="../html/index.html"><h1>Эпоха Петра Великого</h1></a>
+        <nav>
+          <a href="../html/index.html">
+            <button>Главная</button>
+          </a>
+          <a href="../html/biography.html">
+            <button>Биография</button>
+          </a>
+          <a href="../html/table.html">
+            <button>Хронология</button>
+          </a>
+          <a href="../html/gallery.html">
+            <button>Медиатека</button>
+          </a>
+        </nav>
+      </div>
       <img src="../img/png/header.png" alt="Пётр I в Воронеже"/>
     </header>
-    <nav>
-      <a href="../html/index.html">
-        <button>Главная</button>
-      </a>
-      <a href="../html/biography.html">
-        <button>Биография</button>
-      </a>
-      <a href="../html/table.html">
-        <button>Хронология</button>
-      </a>
-      <a href="../html/gallery.html">
-        <button>Медиатека</button>
-      </a>
-    </nav>
+
     <hr>
     <div class="quote">
-      <q>
+      <q><i>
         Выше всех добродетелей рассуждение, ибо всякая добродетель без разума —
         пуста
-      </q>
+      </i></q>
       <p>© Пётр I</p>
     </div>
     <hr>
@@ -53,7 +56,7 @@
       </article>
       <form>
         <fieldset>
-          <legend>Оставьте отзыв о нашем сайте!</legend>
+          <legend><b>Оставьте отзыв о нашем сайте!</b></legend>
           Оцените информацию, размещённую на сайте: <input type="range" min="1" max="5" value="4"><br>
           Оцените галерею: 1 <input type="radio" name="galleryMark"> 2 <input type="radio" name="galleryMark"> 3 <input type="radio" name="galleryMark"> 4 <input type="radio" name="galleryMark"> 5 <input type="radio" name="galleryMark" ><br>
           Как вам внешнее оформление сайта? <select id="mark">
