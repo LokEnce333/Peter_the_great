@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Multi Toggle</title>
+<style>
+    .hidden-block {
+        display: none;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #aaa;
+        background: #f4f4f4;
+        border-radius: 8px;
+    }
+
+    .toggle-link {
+        font-size: 1.1rem;
+        color: #0077cc;
+        cursor: pointer;
+        display: inline-block;
+        margin-top: 15px;
+    }
+</style>
+</head>
+<body>
+
+<a class="toggle-link" data-target="block1">Открыть блок 1</a>
+<div id="block1" class="hidden-block">
+    <h3>Контент блока 1</h3>
+    <p>Информация 1</p>
+</div>
+
+<a class="toggle-link" data-target="block2">Открыть блок 2</a>
+<div id="block2" class="hidden-block">
+    <h3>Контент блока 2</h3>
+    <p>Информация 2</p>
+</div>
+
+<a class="toggle-link" data-target="block3">Открыть блок 3</a>
+<div id="block3" class="hidden-block">
+    <h3>Контент блока 3</h3>
+    <p>Информация 3</p>
+</div>
+
+<script>
+    // Получаем ВСЕ ссылки, которые должны что-то открывать
+    const links = document.querySelectorAll(".toggle-link");
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+
+            // Узнаём, какой блок связан с этой ссылкой
+            const blockId = link.getAttribute("data-target");
+            const block = document.getElementById(blockId);
+
+            // Проверяем, скрыт ли блок
+            if (block.style.display === "none" || block.style.display === "") {
+                block.style.display = "block";
+                link.textContent = "Скрыть";
+            } else {
+                block.style.display = "none";
+                link.textContent = `Открыть ${blockId}`;
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
