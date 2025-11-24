@@ -6,7 +6,7 @@ links.forEach(link => {
         const blockId = link.getAttribute("data-target");
         const block = document.getElementById(blockId);
 
-        if (block.style.display === "none" || block.style.display === "") {
+        if (block.style.display == "none" || block.style.display == "") {
             block.style.display = "block";
             link.textContent = "Скрыть";
         } else {

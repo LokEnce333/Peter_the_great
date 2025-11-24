@@ -1,11 +1,11 @@
 body {
-    text-align: center;
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
     background: white;
     margin: 0;
     color: #232323;
 }
+
 
 h1 {
     background: linear-gradient(90deg, #38b6ff 30%, #bfeaff 100%);
@@ -54,6 +54,7 @@ h3, h4 {
 button {
     background: linear-gradient(90deg, #38b6ff 60%, #90d3f5 100%);
     color: #222;
+    cursor: pointer;
     border: none;
     border-radius: 8px;
     padding: 8px 18px;

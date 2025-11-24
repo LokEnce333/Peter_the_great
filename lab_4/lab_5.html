@@ -6,9 +6,9 @@
     <link rel="stylesheet" type="text/css" href="lab_4.css" />
   </head>
   <body>
-    <h1>Лабораторная работа №4</h1>
+    <h1>Лабораторная работа №5</h1>
     <h2>Цель:</h2>
-    <p>Изучение применения данных, операторов, переменных и функций в JS</p>
+    <p>освоить применение объектов и массивов JS</p>
     <h2>Задания</h2>
 
     <a class="toggle-link" data-target="1">Задание 1</a>
@@ -16,30 +16,479 @@
       <h3>Задание 1</h3>
       <h4>Текст задания:</h4>
       <p>
-        Переделайте приведенный код так, чтобы в нем использовались операции +=,
-        - =, *=, /=, ++, --. Количество строк кода при этом не должно
-        измениться. Код для переделки:
+        Создайте объект let obj = {a: 1, b: 2, c: 3}. Выведите на экран элемент
+        с ключом 'c' двумя способами: через квадратные скобки и как свойство
+        объекта:
       </p>
       <h4>Код:</h4>
       <pre><code>
- const task_1 = document.querySelector(".task1");
- task_1.addEventListener("click", () => {
-     let num = 1;
-     num += 12;
-     num -= 14;
-     num *= 5;
-     num /= 7;
-     num++;
-     num--;
-     alert(num);
- });
+const task_1 = document.querySelector("task1");
+task_1.addEventListener("click", () => {
+    let obj = {a: 1, b: 2, c: 3};
+    alert("Через квадратные скобки: " + obj[c]);
+    alert("Через свойство объекта: " + obj.c);
+})
       </code></pre>
       <a class="task1">
         <button>Выполнить код!</button>
       </a>
     </div>
     <br />
-    
-    <script src="lab_4.js"></script>
+
+    <a class="toggle-link" data-target="2">Задание 2</a>
+    <div id="2" class="hidden-block">
+      <h3>Задание 2</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте объект с днями недели. Ключами в нем должны служить номера дней
+        от начала недели (понедельник - первый и т.д.). Выведите на экран
+        текущий день недели
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_2 = document.querySelector(".task2");
+task_2.addEventListener("click", () => {
+    let daysOfWeek = {
+        1: "Понедельник",
+        2: "Вторник",
+        3: "Среда",
+        4: "Четверг",
+        5: "Пятница",
+        6: "Суббота",
+        7: "Воскресенье",
+    }
+
+    const today = new Date();
+    let dayNum = today.getDay();
+    if(dayNum == 0) dayNum = 7;
+    alert("День недели сегодня: " + daysOfWeek[dayNum]);
+})
+      </code></pre>
+      <a class="task2">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="3">Задание 3</a>
+    <div id="3" class="hidden-block">
+      <h3>Задание 3</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Сформируйте массив, состоящий из 20 целых чисел. Найдите среднее
+        арифметическое его элементов
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_3 = document.querySelector(".task3");
+task_3.addEventListener("click", () => {
+    let arr = [];
+    let sumy = 0;
+    for(let i = 1; i <= 20; i++){
+        arr.push(i);
+        sumy += i;
+    }
+    alert("Среднее арифметическое чисел массива: " + sumy / arr.length);
+});
+      </code></pre>
+      <a class="task3">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="4">Задание 4</a>
+    <div id="4" class="hidden-block">
+      <h3>Задание 4</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Даны два массива: ['a', 'b', 'c'] и [1, 2, 3]. Объедините их вместе с
+        помощью метода contact
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_4 = document.querySelector(".task4");
+task_4.addEventListener("click", () => {
+    let arr1 = ['a', 'b', 'c'], arr2 = [1, 2, 3];
+    alert("Объединённый массив: " + arr1.concat(arr2))
+});
+      </code></pre>
+      <a class="task4">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="5">Задание 5</a>
+    <div id="5" class="hidden-block">
+      <h3>Задание 5</h3>
+      <h4>Текст задания:</h4>
+      <p>Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3</p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_5 = document.querySelector(".task5");
+task_5.addEventListener("click", () => {
+    let arr1 = ['a', 'b', 'c'];
+    arr1.push(1);
+    arr1.push(2);
+    arr1.push(3);
+    alert("Изменённый массив: " + arr1);
+});
+      </code></pre>
+      <a class="task5">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="6">Задание 6</a>
+    <div id="6" class="hidden-block">
+      <h3>Задание 6</h3>
+      <h4>Текст задания:</h4>
+      <p>Дан массив [1, 2, 3]. Сформируйте из него массив [3, 2, 1].</p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_6 = document.querySelector(".task6");
+task_6.addEventListener("click", () => {
+    let arr1 = [1, 2, 3];
+    arr1 = arr1.reverse();
+    alert("Перевёрнутый массив: " + arr1);
+});
+      </code></pre>
+      <a class="task6">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="7">Задание 7</a>
+    <div id="7" class="hidden-block">
+      <h3>Задание 7</h3>
+      <h4>Текст задания:</h4>
+      <p>Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.</p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_7 = document.querySelector(".task7");
+task_7.addEventListener("click", () => {
+    let arr1 = [1, 2, 3];
+    arr1.unshift(4);
+    arr1.unshift(5);
+    arr1.unshift(6);
+    alert("Изменённый массив: " + arr1);
+});
+      </code></pre>
+      <a class="task7">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="8">Задание 8</a>
+    <div id="8" class="hidden-block">
+      <h3>Задание 8</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дан массив ['js', 'css', 'jq']. Выведите на экран первый и последний
+        элемент.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_8 = document.querySelector(".task8");
+task_8.addEventListener("click", () => {
+    let arr1 = ['js', 'css', 'jq'];
+    alert("Первый элемент: " + arr1[0] + "\nПоследний элемент: " + arr1[arr1.length-1]);
+});
+      </code></pre>
+      <a class="task8">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="9">Задание 9</a>
+    <div id="9" class="hidden-block">
+      <h3>Задание 9</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый
+        массив элементы [4, 5]
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_9 = document.querySelector(".task9");
+task_9.addEventListener("click", () => {
+    let arr1 = [1, 2, 3, 4, 5];
+    arr1 = arr1.slice(3, 5);
+    alert("Срез массива: " + arr1);
+});
+      </code></pre>
+      <a class="task9">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="10">Задание 10</a>
+    <div id="10" class="hidden-block">
+      <h3>Задание 10</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте его в
+        [1, 2, 3, 'a', 'b', 'c', 4, 5].
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_10 = document.querySelector(".task10");
+task_10.addEventListener("click", () => {
+    let arr1 = [1, 2, 3, 4, 5];
+    arr1.splice(3, 0, 'a', 'b', 'c');
+    alert("Изменённый массив: " + arr1);
+});
+      </code></pre>
+      <a class="task10">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="11">Задание 11</a>
+    <div id="11" class="hidden-block">
+      <h3>Задание 11</h3>
+      <h4>Текст задания:</h4>
+      <p>Дан массив [3, 4, 1, 2, 7]. Отсортируйте его</p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_11 = document.querySelector(".task11");
+task_11.addEventListener("click", () => {
+    let arr = [3, 4, 1, 2, 7];
+    arr.sort();
+    alert("отсортированный массив: " + arr);
+});
+      </code></pre>
+      <a class="task11">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="12">Задание 12</a>
+    <div id="12" class="hidden-block">
+      <h3>Задание 12</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дан объект {js:'test', jq: 'hello', css: 'world'}. Получите массив его
+        ключей. (используйте Object.keys)
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_12 = document.querySelector(".task12");
+task_12.addEventListener("click", () => {
+    let obj = {js:'test', jq: 'hello', css: 'world'};
+    let arrKeys = Object.keys(obj);
+    alert("Значения ключей: " + arrKeys);
+});
+      </code></pre>
+      <a class="task12">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="13">Задание 13</a>
+    <div id="13" class="hidden-block">
+      <h3>Задание 13</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Сформируйте случайный массив с числами от 0 до 20 используя
+        Math.random() и Math.float(). С помощью метода includes проверьте, что в
+        этом массиве есть число 5. Если есть - выведите 'да', а если нет -
+        выведите 'нет'
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_13 = document.querySelector(".task13");
+task_13.addEventListener("click", () => {
+    let arr = [];
+    for(let i = 0; i < 20; i++){
+        arr.push(Math.floor(Math.random() * 20));
+    }
+    if(arr.includes(5)) alert("да");
+    else alert("нет");
+});
+      </code></pre>
+      <a class="task13">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="14">Задание 14</a>
+    <div id="14" class="hidden-block">
+      <h3>Задание 14</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Сформируйте массив с случайными числами от -50 до +50. Запишите в новый
+        массив только те числа, которые больше нуля и меньше 10-ти. Используйте
+        для этого метод filter.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_14 = document.querySelector(".task14");
+task_14.addEventListener("click", () => {
+    let arr = [];
+    for(let i = 0; i < 20; i++){
+        arr.push(Math.floor(Math.random() * 100)-50);
+    }
+    let newArr = arr.filter(num => num > 0 && num < 10);
+    alert("Новый массив: " + newArr);
+});
+
+      </code></pre>
+      <a class="task14">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="15">Задание 15</a>
+    <div id="15" class="hidden-block">
+      <h3>Задание 1</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дан массив let arr = [23, 34, 22, 9, 11]. С помощью метода map получите
+        новый массив, каждый элемент которого возведен в квадрат.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+function squar(num){
+    return num*num;
+}
+const task_15 = document.querySelector(".task15");
+task_15.addEventListener("click", () => {
+    let arr = [23, 34, 22, 9, 11];
+    arr = arr.map(squar);
+    alert("Массив квадратов: " + arr);
+});
+
+      </code></pre>
+      <a class="task15">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="16">Задание 16</a>
+    <div id="16" class="hidden-block">
+      <h3>Задание 16</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте объект, в котором хранится Ваше имя в поле name и метод
+        sayHello, при вызове которого выводится alert с приветствием «Привет,
+        меня зовут ваше_имя». Продемонстрируйте вызов этого метода.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_16 = document.querySelector(".task16");
+task_16.addEventListener("click", () => {
+    let myname = {
+        name: "Илья",
+        sayHi(){
+            alert("Привет, меня зовут " + this.name);
+        }
+    }
+    myname.sayHi();
+});
+
+      </code></pre>
+      <a class="task16">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="17">Задание 17</a>
+    <div id="17" class="hidden-block">
+      <h3>Задание 17</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте объект, который хранит числа от 0 до 20. Добавьте метод,
+        который проверяет, имеется ли переданное число в массиве. Если
+        переданное число имеется, то метод должен его вернуть, в противном
+        случае функция должна вывести сообщение об этом и добавить элемент в
+        массив. Продемонстрируйте работу этого метода.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_17 = document.querySelector(".task17");
+task_17.addEventListener("click", () => {
+    const numberStorage = {
+        numbers: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+
+        checkAndAdd: function (num) {
+            if (this.numbers.includes(num)) {
+                alert(`Число ${num} найдено в массиве`);
+                return num;
+            } else {
+                alert(`Число ${num} не найдено. Добавляю в массив...`);
+                this.numbers.push(num);
+                return this.numbers;
+            }
+        }
+    };
+
+    numberStorage.checkAndAdd(5);
+    numberStorage.checkAndAdd(43);
+    numberStorage.checkAndAdd(43);
+});
+
+      </code></pre>
+      <a class="task17">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="18">Задание 18</a>
+    <div id="18" class="hidden-block">
+      <h3>Задание 18</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте функцию-конструтор, которая создает объект студента. Функция
+        должна принимать Имя и Фамилию и иметь метод sayHello, который выводит
+        приветствие вида «Привет, меня зовут Имя». Продемонстрируйте создание
+        объектов и работу метода sayHello для каждого созданного объекта.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+const task_18 = document.querySelector(".task18");
+task_18.addEventListener("click", () => {
+    function Student(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    Student.prototype.sayHello = function () {
+        alert(`Привет, меня зовут ${this.firstName}`);
+    };
+
+    const student1 = new Student('Илья', 'Евстратов');
+    const student2 = new Student('Мария', 'Иванова');
+
+    alert("Первый студент: ");
+    student1.sayHello();
+    alert(`Полное имя: ${student1.firstName} ${student1.lastName}`);
+
+    alert("Второй студент: ");
+    student2.sayHello();
+    alert(`Полное имя: ${student2.firstName} ${student2.lastName}`);
+});
+      </code></pre>
+      <a class="task18">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <script src="lab_5.js"></script>
   </body>
 </html>
