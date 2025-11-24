@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multi Toggle</title>
+    <link rel="stylesheet" type="text/css" href="lab_4.css" />
+  </head>
+  <body>
+    <h1>Лабораторная работа №4</h1>
+    <h2>Цель:</h2>
+    <p>Изучение применения данных, операторов, переменных и функций в JS</p>
+    <h2>Задания</h2>
+
+    <a class="toggle-link" data-target="1">Задание 1</a>
+    <div id="1" class="hidden-block">
+      <h3>Задание 1</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Переделайте приведенный код так, чтобы в нем использовались операции +=,
+        - =, *=, /=, ++, --. Количество строк кода при этом не должно
+        измениться. Код для переделки:
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_1 = document.querySelector(".task1");
+ task_1.addEventListener("click", () => {
+     let num = 1;
+     num += 12;
+     num -= 14;
+     num *= 5;
+     num /= 7;
+     num++;
+     num--;
+     alert(num);
+ });
+      </code></pre>
+      <a class="task1">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+    
+    <script src="lab_4.js"></script>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    background: white;
+    margin: 0;
+    color: #232323;
+}
+
+h1 {
+    background: linear-gradient(90deg, #38b6ff 30%, #bfeaff 100%);
+    color: #222;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    border-radius: 0 0 30px 30px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 30px;
+    color: #0480bb;
+    font-weight: bold;
+}
+
+h3, h4 {
+    color: #22728a;
+    margin-bottom: 6px;
+}
+
+.toggle-link {
+    font-size: 1.15rem;
+    color: #0480bb;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 17px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    border-bottom: 2px solid #38b6ff;
+}
+
+.hidden-block {
+    display: none;
+    padding: 14px;
+    margin: 16px 0;
+    border: 1px solid #79b8e3;
+    background: #f4faff;
+    border-radius: 12px;
+}
+
+button {
+    background: linear-gradient(90deg, #38b6ff 60%, #90d3f5 100%);
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 7px;
+}
+button:hover {
+    background: #79b8e3;
+    color: #fff;
+}
+
+pre {
+    color: #32b1ef;
+    background-color: #232323;
+    border-radius: 1rem;
+    padding: 14px 12px;
+    font-size: 15px;
+}
+
+code {
+    font-family: 'Fira Mono', monospace;
+    font-size: 15px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+}

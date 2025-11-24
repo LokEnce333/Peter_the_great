@@ -1,69 +1,677 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-<meta charset="UTF-8">
-<title>Multi Toggle</title>
-<style>
-    .hidden-block {
-        display: none;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #aaa;
-        background: #f4f4f4;
-        border-radius: 8px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Multi Toggle</title>
+    <link rel="stylesheet" type="text/css" href="lab_4.css" />
+  </head>
+  <body>
+    <h1>Лабораторная работа №4</h1>
+    <h2>Цель:</h2>
+    <p>Изучение применения данных, операторов, переменных и функций в JS</p>
+    <h2>Задания</h2>
 
-    .toggle-link {
-        font-size: 1.1rem;
-        color: #0077cc;
-        cursor: pointer;
-        display: inline-block;
-        margin-top: 15px;
-    }
-</style>
-</head>
-<body>
+    <a class="toggle-link" data-target="1">Задание 1</a>
+    <div id="1" class="hidden-block">
+      <h3>Задание 1</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Переделайте приведенный код так, чтобы в нем использовались операции +=,
+        - =, *=, /=, ++, --. Количество строк кода при этом не должно
+        измениться. Код для переделки:
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_1 = document.querySelector(".task1");
+ task_1.addEventListener("click", () => {
+     let num = 1;
+     num += 12;
+     num -= 14;
+     num *= 5;
+     num /= 7;
+     num++;
+     num--;
+     alert(num);
+ });
+      </code></pre>
+      <a class="task1">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-<a class="toggle-link" data-target="block1">Открыть блок 1</a>
-<div id="block1" class="hidden-block">
-    <h3>Контент блока 1</h3>
-    <p>Информация 1</p>
-</div>
+    <a class="toggle-link" data-target="2">Задание 2</a>
+    <div id="2" class="hidden-block">
+      <h3>Задание 2</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте переменные a и b. Выведите на экран их сумму, разность,
+        произведение и частное
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_2 = document.querySelector(".task2");
+ task_2.addEventListener("click", () => {
+     let a = 6;
+     let b = 9;
+     alert("Сумма: " +(a + b)+"\n"+
+         "Разность: " + (a - b)+"\n"+
+         "Произведение: " + a * b + "\n"+
+         "Частное: "+ a / b
+     )
+ });
+      </code></pre>
+      <a class="task2">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-<a class="toggle-link" data-target="block2">Открыть блок 2</a>
-<div id="block2" class="hidden-block">
-    <h3>Контент блока 2</h3>
-    <p>Информация 2</p>
-</div>
+    <a class="toggle-link" data-target="3">Задание 3</a>
+    <div id="3" class="hidden-block">
+      <h3>Задание 3</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте переменные str1='Привет, ' и str2='Мир!'. С помощью этих
+        переменных и операции сложения строк выведите на экран фразу 'Привет,
+        Мир!'
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_3 = document.querySelector(".task3");
+ task_3.addEventListener("click", () => {
+     let str1 = "Привет,", str2 = "Мир!";
+     alert(str1 + " " + str2);
+ });
+      </code></pre>
+      <a class="task3">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-<a class="toggle-link" data-target="block3">Открыть блок 3</a>
-<div id="block3" class="hidden-block">
-    <h3>Контент блока 3</h3>
-    <p>Информация 3</p>
-</div>
+    <a class="toggle-link" data-target="4">Задание 4</a>
+    <div id="4" class="hidden-block">
+      <h3>Задание 4</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте переменную str и присвойте ей значение 'abcde'. Обращаясь к
+        отдельным символам этой строки выведите в консоль символ 'a', символ
+        'c', символ 'e'.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_4 = document.querySelector(".task4");
+ task_4.addEventListener("click", () => {
+     let str = 'abcde';
+     alert(str[0]+'\n'+str[2]+'\n'+str[4]);
+ });
+      </code></pre>
+      <a class="task4">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-<script>
-    // Получаем ВСЕ ссылки, которые должны что-то открывать
-    const links = document.querySelectorAll(".toggle-link");
+    <a class="toggle-link" data-target="5">Задание 5</a>
+    <div id="5" class="hidden-block">
+      <h3>Задание 5</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Запросите у пользователя число с помощью встроенной функции prompt. Если
+        введенное число больше нуля и меньше 5-ти, то выведите 'Верно', иначе
+        выведите 'Неверно'.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_5 = document.querySelector(".task5");
+ task_5.addEventListener("click", () => {
+     let res = prompt('Введите число: ');
+     if(res > 0 && res < 5){
+         alert('Верно');
+     }
+     else{
+         alert('Неверно');
+     }
+ });
+      </code></pre>
+      <a class="task5">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-    links.forEach(link => {
-        link.addEventListener("click", () => {
+    <a class="toggle-link" data-target="6">Задание 6</a>
+    <div id="6" class="hidden-block">
+      <h3>Задание 6</h3>
+      <h4>Текст задания:</h4>
+      <p>Дана строка 'aaa@bbb@ccc'. Замените все @ на '!'</p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_6 = document.querySelector(".task6");
+ task_6.addEventListener("click", () => {
+     let str = 'aaa@bbb@ccc';
+     str = str.replace('@', '!');
+     alert(str);
+ });
 
-            // Узнаём, какой блок связан с этой ссылкой
-            const blockId = link.getAttribute("data-target");
-            const block = document.getElementById(blockId);
+      </code></pre>
+      <a class="task6">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
 
-            // Проверяем, скрыт ли блок
-            if (block.style.display === "none" || block.style.display === "") {
-                block.style.display = "block";
-                link.textContent = "Скрыть";
-            } else {
-                block.style.display = "none";
-                link.textContent = `Открыть ${blockId}`;
-            }
-        });
-    });
-</script>
+    <a class="toggle-link" data-target="7">Задание 7</a>
+    <div id="7" class="hidden-block">
+      <h3>Задание 7</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Дана строка 'я учусь на ИРИТ!'. Найдите количество символов в этой
+        строке
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_7 = document.querySelector(".task7");
+ task_7.addEventListener("click", () => {
+     let str = 'я учусь на ИРИТ!';
+     alert(str.length);
+ });
 
-</body>
+      </code></pre>
+      <a class="task7">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="8">Задание 8</a>
+    <div id="8" class="hidden-block">
+      <h3>Задание 8</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        С помощью двух вложенных циклов нарисуйте следующую пирамидку:<br />
+        1<br />
+        22<br />
+        333<br />
+        4444<br />
+        55555<br />
+        666666<br />
+        7777777<br />
+        88888888<br />
+        999999999
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_8 = document.querySelector(".task8");
+ task_8.addEventListener("click", () => {
+     for(let i = 1; i < 10; i++){
+         let str = '';
+         for(let j = 0; j < i; j++){
+             str += i;
+         }
+         str += '\n';
+     }
+     alert(str);
+ });
+      </code></pre>
+      <a class="task8">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="9">Задание 9</a>
+    <div id="9" class="hidden-block">
+      <h3>Задание 9</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        У прямоугольного треугольника две стороны n (со значением 3) и m (со
+        значением 4). Найдите гипотенузу k по теореме Пифагора
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_9 = document.querySelector(".task9");
+ task_9.addEventListener('click', () => {
+     let n = 3, m = 4;
+     alert("Длина гипотенузы равна: " + math.sqrt(n**2 + m**2));
+ })
+      </code></pre>
+      <a class="task9">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="10">Задание 10</a>
+    <div id="10" class="hidden-block">
+      <h3>Задание 10</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        С помощью confirm выведите окно с сообщением: "Нажмите ОК или Отмена" и
+        двумя кнопками — «OK» и «Отмена», позволяя пользователю выбрать одну из
+        них. С помощью метода alert() выведите название нажатой пользователем
+        кнопки.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_10 = document.querySelector('.task10');
+ task_10.addEventListener('click', () => {
+     if(confirm("Нажмите ОК или Отмена")){
+         alert("ОК");
+     }
+     else{
+         alert("Отмена");
+     }
+ })
+      </code></pre>
+      <a class="task10">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="11">Задание 11</a>
+    <div id="11" class="hidden-block">
+      <h3>Задание 11</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте страницу, которая сначала выводит окно с запросом: "Введите
+        свое имя". После ввода пользователем имени на странице должно появиться
+        окно с запросом подтверждения: "Введенное имя правильное?". И, наконец,
+        после того, как пользователь нажмет кнопку подтверждения «OK» должно
+        появиться окно приветствия: "Здравствуйте, введенное_имя". При решении
+        задачи используются все три метода. Если пользователь нажмет «Отмена»
+        выведите сообщение «Имя введено неправильно».
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_11 = document.querySelector(".task11");
+ task_11.addEventListener('click', () => {
+     let name = prompt("Введите свое имя");
+     if(confirm("Введенное имя правильное?")){
+         alert("Здравствуйте, " + name);
+     }
+     else{
+         alert("Имя введено неправильно");
+     }
+ })
+      </code></pre>
+      <a class="task11">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="12">Задание 12</a>
+    <div id="12" class="hidden-block">
+      <h3>Задание 12</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Запросите у пользователя поочередно 3 числа. Определите наибольшее число
+        и выведите его на экран.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_12 = document.querySelector(".task12");
+ task_12.addEventListener('click', () => {
+     let num1 = prompt("Введите первое число");
+     let num2 = prompt("Введите второе число");
+     let num3 = prompt("Введите третье число");
+     alert("Наибольшее число: " + Math.max(num1, num2, num3))
+ })
+      </code></pre>
+      <a class="task12">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="13">Задание 13</a>
+    <div id="13" class="hidden-block">
+      <h3>Задание 13</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Пользователь вводит через prompt трёхзначное число. Проверить
+        трехзначное число на четность и найти сумму его цифр, если число четное,
+        или произведение его цифр, если число нечетное. Показать сообщение об
+        ошибке если пользователь ввел не трехзначное число
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_13 = document.querySelector(".task13");
+ task_13.addEventListener('click', () => {
+     let num = prompt("Введите трёхзначное число");
+     if(num / 100 < 1 || num / 100 >= 10){
+         alert("Вы ввели не трёхнзначное число");
+     }
+     else{
+         if(num % 2){
+             alert(Math.floor(num / 100) * Math.floor((num % 100) / 10) * Math.floor(num % 10));
+         }
+         else{
+             alert(Math.floor(num / 100) + Math.floor((num % 100) / 10) + Math.floor(num % 10));
+         }
+     }
+ });
+
+      </code></pre>
+      <a class="task13">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="14">Задание 14</a>
+    <div id="14" class="hidden-block">
+      <h3>Задание 14</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Пользователь вводит значение переменной num. Переменная num может
+        принимать 4 числовых значения: 1, 2, 3 или 4. Если она имеет значение 1,
+        то в переменную result запишите 'весна', если имеет значение 2 – 'лето'
+        и так далее. Решите задачу через switch-case.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_14 = document.querySelector(".task14");
+ task_14.addEventListener('click', () => {
+     let num = Number(prompt("Введите число: 1, 2, 3 или 4"));
+     switch (num){
+         case 1:
+             alert("Весна");
+             break;
+         case 2:
+             alert("Лето");
+             break;
+         case 3:
+             alert("Осень");
+             break;
+         case 4:
+             alert("Зима");
+             break;
+     }
+ });
+
+      </code></pre>
+      <a class="task14">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="15">Задание 15</a>
+    <div id="15" class="hidden-block">
+      <h3>Задание 15</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Пользователь вводит целое число. Напишите код, который выведет число,
+        обратное по порядку составляющих его цифр введенному. Например, введено
+        9876, надо вывести 6789. Решите задачу через цикл while.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_15 = document.querySelector(".task15");
+ task_15.addEventListener('click', () => {
+     let num = Number(prompt("Введите число"));
+     let obr = '';
+     while(num > 0){
+         obr += num % 10;
+         num = Math.floor(num/10);
+     }
+     alert("Обратное число: " + obr);
+ });
+      </code></pre>
+      <a class="task15">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="16">Задание 16</a>
+    <div id="16" class="hidden-block">
+      <h3>Задание 16</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Напишите цикл, который предлагает prompt ввести число. Если посетитель
+        ввёл число – попросить ввести ещё раз, и так далее. Цикл должен
+        спрашивать ввести число пока либо посетитель не введёт 0, либо не нажмёт
+        кнопку Cancel (ESC). После ввода нуля, показать на экран количество
+        чисел, которые были введены, их общую сумму и среднее арифметическое
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_16 = document.querySelector(".task16");
+ task_16.addEventListener('click', () => {
+     let stop = false;
+ 
+     document.addEventListener('keydown', function(event){
+         if(event.key == 'Escape'){
+             stop = true;
+         }
+     })
+ 
+ 
+     let cnt = 0, sumy = 0;
+     while(!stop){
+         let num = Number(prompt("Введите число:"));
+         if(num == 0) break;
+         cnt++;
+         sumy += num;
+     }
+     alert("Количество чисел :" + cnt + '\nСумма чисел: ' + sumy + "\nСреднее арифметическое чисел: " + sumy/cnt);
+ });
+      </code></pre>
+      <a class="task16">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="17">Задание 17</a>
+    <div id="17" class="hidden-block">
+      <h3>Задание 17</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте функцию, которая возвращает квадрат числа. Число передается
+        параметром.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ function squre(num){
+     return num*num;
+ }
+ const task_17 = document.querySelector(".task17");
+ task_17.addEventListener('click', () => {
+     alert("Квадрат числа: " + squre(Number(prompt("Введите число: "))))
+ });
+      </code></pre>
+      <a class="task17">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="18">Задание 18</a>
+    <div id="18" class="hidden-block">
+      <h3>Задание 18</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте функцию, которая принимает параметром число от 1 до 7, а
+        возвращает день недели на русском языке.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ function dayOfWeek(day){
+     switch(day){
+         case 1:
+             return("Понедельник")
+         case 2:
+             return("Вторник")
+         case 3:
+             return("Среда")
+         case 4:
+             return("Четверг")
+         case 5:
+             return("Пятница")
+         case 6:
+             return("Суббота")
+         case 7:
+             return("Воскресенье")
+     }
+ }
+ const task_18 = document.querySelector(".task18");
+ task_18.addEventListener('click', () => {
+     alert("День недели: " + dayOfWeek(Number(prompt("Введите день от 1 до 7: "))));
+ });
+
+      </code></pre>
+      <a class="task18">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="19">Задание 19</a>
+    <div id="19" class="hidden-block">
+      <h3>Задание 19</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте функцию позволяющую нарисовать пирамиду, как показано на
+        рисунке, только у вашей пирамиды количество рядов задается пользователем
+        через prompt<br />
+        x<br />
+        xx<br />
+        xxx<br />
+        xxxx
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ function buildPiramidka(row){
+     let piramidka = '';
+     for(let i = 1; i <= row; i++){
+         for(let j = 0; j < i; j++){
+             piramidka += '*';
+         }
+         piramidka += "\n";
+     }
+     return piramidka;
+ }
+ const task_19 = document.querySelector(".task19");
+ task_19.addEventListener('click', () => {
+     alert(buildPiramidka(Number(prompt("Введите высоту пирамидки: "))));
+ })
+      </code></pre>
+      <a class="task19">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="20">Задание 20</a>
+    <div id="20" class="hidden-block">
+      <h3>Задание 20</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте анонимную функцию, которая параметром принимает число и
+        проверяет, что оно больше нуля и меньше 10. Если это верно - функция
+        возвращает true, если не так - false.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_20 = document.querySelector(".task20");
+ task_20.addEventListener('click', () => {
+     let ans = function(){
+         let num = Number(prompt("Введите число: "));
+         if(0 < num && num < 10) return true;
+         else return false; 
+     }
+     alert(ans());
+ })
+      </code></pre>
+      <a class="task20">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="21">Задание 21</a>
+    <div id="21" class="hidden-block">
+      <h3>Задание 21</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Создайте стрелочную функцию, которая получает переменные a1, a2, a3, a4,
+        a5, x через атрибуты. Найдите значения выражения: a1*x^4+ a2*x^3+
+        a3*x^2+ a4*x+a5
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ const task_21 = document.querySelector(".task21");
+ task_21.addEventListener('click', () => {
+     let a1 = Number(prompt("Введите парметр a1: "))
+     let a2 = Number(prompt("Введите парметр a2: "))
+     let a3 = Number(prompt("Введите парметр a3: "))
+     let a4 = Number(prompt("Введите парметр a4: "))
+     let a5 = Number(prompt("Введите парметр a5: "))
+     let x = Number(prompt("Введите x: "))
+     let ans = (a1, a2, a3, a4, a5, x) => {return a1*x**4 + a2*x**3 + a3*x**2 + a4*x + a5};
+     alert(ans(a1, a2, a3, a4, a5, x))
+ })
+      </code></pre>
+      <a class="task21">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="22">Задание 22</a>
+    <div id="22" class="hidden-block">
+      <h3>Задание 22</h3>
+      <h4>Текст задания:</h4>
+      <p>Создайте рекурсивную функцию вычисления чисел Фибоначчи</p>
+      <h4>Код:</h4>
+      <pre><code>
+ function findFibonachi(num){
+     if(num == 1) return 1;
+     if(num == 0) return 0;
+     return findFibonachi(num-1) + findFibonachi(num-2);
+ }
+ const task_22 = document.querySelector(".task22");
+ task_22.addEventListener('click', () => {
+     alert("Число Фибоначчи: " + findFibonachi(Number(prompt("Введи номер числа Фибоначчи, коротое хочешь узнать: "))));
+ })
+      </code></pre>
+      <a class="task22">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+
+    <a class="toggle-link" data-target="23">Задание 23</a>
+    <div id="23" class="hidden-block">
+      <h3>Задание 23</h3>
+      <h4>Текст задания:</h4>
+      <p>
+        Напишите функцию a, которая принимает в качестве аргумента анонимную
+        функцию. Функция a запрашивает у пользователя число, а передаваемая
+        анонимная функция выводит его в консоль.
+      </p>
+      <h4>Код:</h4>
+      <pre><code>
+ function a(func){
+     let num = Number(prompt("Введите число: "));
+     func(num);
+ }
+ const task_23 = document.querySelector(".task23");
+ task_23.addEventListener('click', () => {
+     alert(a(function(n){alert(n)}));
+ })
+      </code></pre>
+      <a class="task23">
+        <button>Выполнить код!</button>
+      </a>
+    </div>
+    <br />
+    <script src="lab_4.js"></script>
+  </body>
 </html>
