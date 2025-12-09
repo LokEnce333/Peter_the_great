@@ -67,28 +67,41 @@
         <source src="../vid/Preview.mp4" type="video/mp4">
       </video>
     </article>
-    <form>
+    <form id="contact-form">
       <fieldset>
         <legend><b>Оставьте отзыв о нашем сайте!</b></legend>
-        Оцените информацию, размещённую на сайте: <input type="range" min="1" max="5" value="4"><br>
-        Оцените галерею: 1 <input type="radio" name="galleryMark"> 2 <input type="radio" name="galleryMark"> 3 <input
-          type="radio" name="galleryMark"> 4 <input type="radio" name="galleryMark"> 5 <input type="radio"
-          name="galleryMark"><br>
-        Как вам внешнее оформление сайта? <select id="mark">
+        Оцените информацию, размещённую на сайте:
+        <input type="range" min="1" max="5" value="4"><br>
+
+        Оцените галерею:
+        1 <input type="radio" name="galleryMark">
+        2 <input type="radio" name="galleryMark">
+        3 <input type="radio" name="galleryMark">
+        4 <input type="radio" name="galleryMark">
+        5 <input type="radio" name="galleryMark"><br>
+
+        Как вам внешнее оформление сайта?
+        <select id="mark">
           <option>Замечательно!</option>
           <option>Хорошо!</option>
           <option>Нормально</option>
           <option>Плохо..</option>
         </select><br>
-        <label>Напишите, пожалуйста, ваше впечатление!</label><br>
-        <textarea rows="3" cols="50"></textarea>
+
+        <label for="review-text">Напишите, пожалуйста, ваше впечатление!</label><br>
+        <textarea id="review-text" name="review-text" rows="3" cols="50"></textarea>
+
         <a href="#">
-          <button>
+          <button type="submit">
             Отправить!
           </button>
         </a>
       </fieldset>
     </form>
+
+    <p id="greeting" style="display:none;"></p>
+    <p id="success-message" style="display:none;">Спасибо, форма успешно отправлена!</p>
+
   </main>
   <hr>
   <footer class="footer">
@@ -116,7 +129,19 @@
         <a href="#">О компании</a>
       </p>
     </div>
+
+    <div class="footer-block" id="time">
+      <h3>Время сейчас:</h3>
+      <a class="time">
+        <button>Узнать текущее время</button>
+      </a>
+    </div>
+
+    <div class="footer-block">
+      <h3>Расстояние до первого корпуса НГТУ</h3>
+    </div>
   </footer>
+  <script src="../js/lab_6.js"></script>
 </body>
 
 </html>

@@ -175,7 +175,7 @@ fieldset button {
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem;
   background-color: #202326;
@@ -200,6 +200,11 @@ fieldset button {
 .footer a {
   color: inherit;
   font-weight: bold;
+}
+
+#time a{
+  display: flex;
+  
 }
 
 .footer a:hover {
